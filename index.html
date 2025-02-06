@@ -31,6 +31,26 @@
             color: #fff;
             padding: 15px;
         }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .navbar input, .navbar button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .navbar button {
+            background: #ff6b81;
+            color: white;
+            cursor: pointer;
+        }
         .gallery {
             display: flex;
             flex-direction: column;
@@ -71,6 +91,12 @@
 <body>
     <img src="logo.png" alt="Logo Informatika RO" class="logo">
     <h1>Informatika RO</h1>
+    <div class="navbar">
+        <input type="text" placeholder="Caută...">
+        <button>Search</button>
+        <input type="file" id="upload" accept="image/*">
+        <button onclick="uploadImage()">Trimite poza</button>
+    </div>
     <p class="description">Un hub dedicat pasionaților de tehnologie și robotică de la Școala 12 Miron Costin, Galați. Explorăm, inovăm și construim împreună viitorul digital!</p>
     
     <div class="gallery">
@@ -87,5 +113,16 @@
             <p class="image-description">Descriere pentru a treia imagine.</p>
         </div>
     </div>
+
+    <script>
+        function uploadImage() {
+            const fileInput = document.getElementById('upload');
+            if (fileInput.files.length > 0) {
+                alert('Imaginea a fost trimisă!'); // Aici poți adăuga logica pentru trimiterea efectivă
+            } else {
+                alert('Selectează o imagine înainte de a trimite.');
+            }
+        }
+    </script>
 </body>
 </html>
