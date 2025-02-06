@@ -11,8 +11,8 @@
             text-align: center;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            color: #333;
+            background: #000;
+            color: #fff;
         }
         h1 {
             font-family: 'Magic Retro', cursive;
@@ -28,10 +28,8 @@
             margin: 20px auto;
             max-width: 600px;
             font-size: 20px;
-            color: #444;
-            background: rgba(255, 255, 255, 0.8);
+            color: #fff;
             padding: 15px;
-            border-radius: 10px;
         }
         .gallery {
             display: flex;
@@ -43,13 +41,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: white;
             padding: 10px;
             margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             width: 100%;
+        }
+        .image-container:nth-child(odd) {
+            flex-direction: row;
         }
         .image-container:nth-child(even) {
             flex-direction: row-reverse;
@@ -63,7 +61,7 @@
         .image-description {
             text-align: left;
             font-size: 18px;
-            color: #555;
+            color: #fff;
         }
     </style>
 </head>
